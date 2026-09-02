@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h1>Que ha temblado hoy</h1>
+<p class="bajada">Todos los terremotos que ha registrado el servicio geologico de Estados Unidos en las ultimas veinticuatro horas, en cualquier parte del mundo.</p>
+
+<section class="resultado">
+  <p class="resultado-intro">Sismos registrados</p>
+  <p class="cifrota">{{ total }}</p>
+  <p class="rango">El mayor fue de magnitud <strong>{{ mayor }}</strong>. El mas profundo, a <strong>{{ hondo }} km</strong>.</p>
+</section>
+
+<h2>Cuando ocurrieron</h2>
+<p class="apunte">Cada barra es una hora. Arrastra para ver cuantos hubo en cada una.</p>
+<div id="gr-horas"></div>
+
+<h2>Reparto por magnitud</h2>
+<p class="apunte">La forma de esta grafica es siempre la misma en todo el planeta: muchos pequenos, poquisimos grandes.</p>
+<div id="gr-magnitudes"></div>
+
+<h2>La lista</h2>
+<ol class="lista">
+{%- for s in lista %}
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">{{ s.lugar }}</span>
+    <span class="valor">{{ s.mag }}</span>
+    <span class="sub">{{ s.profundidad }} km de profundidad</span>
+  </li>
+{%- endfor %}
+</ol>
+
+<h2>Un par de cosas que confunden</h2>
+<p>Los nombres de los sitios llegan en ingles porque es como los publica el organismo. Traducirlos automaticamente daria resultados peores que dejarlos.</p>
+<p>Vas a ver muchisimos sismos en California, Alaska y Hawai. No es que tiemble mas alli: es que hay muchos mas sensores. El catalogo mide instrumentacion tanto como geologia.</p>
+<p>La escala de magnitud es logaritmica. Un 6 no es el doble que un 3, es unas mil veces mas energia.</p>
+{% endblock %}
+
+{% block fuente %}
+<p>Fuente: United States Geological Survey. Dominio publico. Los datos se refrescan cada vez que corre la construccion, no en tiempo real.</p>
+{% endblock %}
+
+{% block script %}
+<script id="datos" type="application/json">{{ datos_json | safe }}</script>
+<script>
+(function(){
+  const D = JSON.parse(document.getElementById("datos").textContent);
+  Grafica.barras("#gr-horas", {
+    datos: D.horas.map(h => ({x: h.etiqueta, y: h.cuantos})),
+    formato: v => Grafica.numero(v) + (v === 1 ? " sismo" : " sismos"),
+    titulo: "Sismos por hora"
+  });
+  Grafica.barras("#gr-magnitudes", {
+    datos: D.magnitudes.map(m => ({x: m.tramo, y: m.cuantos})),
+    formato: v => Grafica.numero(v) + (v === 1 ? " sismo" : " sismos"),
+    titulo: "Sismos por magnitud"
+  });
+})();
+</script>
+{% endblock %}

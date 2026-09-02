@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terremotos de las ultimas 24 horas en el mundo</title>
+<meta name="description" content="Todos los sismos registrados por el USGS en las ultimas veinticuatro horas, con su magnitud y profundidad.">
+<link rel="canonical" href="https://adrianezd.github.io/proyecciones-terremotos">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terremotos de las ultimas 24 horas en el mundo">
+<meta property="og:description" content="Todos los sismos registrados por el USGS en las ultimas veinticuatro horas, con su magnitud y profundidad.">
+<meta property="og:locale" content="es_ES">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./estatico/estilo.css">
+
+</head>
+<body data-acento="terremotos">
+
+<nav class="barra" aria-label="Secciones">
+  <a class="marca" href="https://adrianezd.github.io/proyecciones/">Proyecciones</a>
+  <div class="enlaces"><a href="https://adrianezd.github.io/proyecciones-bolsa/">Bolsa</a><a href="https://adrianezd.github.io/proyecciones-materias-primas/">Materias primas</a><a href="https://adrianezd.github.io/proyecciones-divisas/">Divisas</a><a href="https://adrianezd.github.io/proyecciones-bitcoin/">Bitcoin</a><a href="https://adrianezd.github.io/proyecciones-bonos/">Bonos</a><a href="https://adrianezd.github.io/proyecciones-vivienda/">Vivienda</a><a href="https://adrianezd.github.io/proyecciones-alquiler/">Alquiler</a><a href="https://adrianezd.github.io/proyecciones-gasolina/">Gasolina</a><a href="https://adrianezd.github.io/proyecciones-supermercado/">Supermercado</a><a href="https://adrianezd.github.io/proyecciones-terremotos/" aria-current="page">Terremotos</a><a href="https://adrianezd.github.io/proyecciones-sismos/">Sismos en Espana</a>
+  </div>
+</nav>
+
+<main class="marco">
+
+<h1>Que ha temblado hoy</h1>
+<p class="bajada">Todos los terremotos que ha registrado el servicio geologico de Estados Unidos en las ultimas veinticuatro horas, en cualquier parte del mundo.</p>
+
+<section class="resultado">
+  <p class="resultado-intro">Sismos registrados</p>
+  <p class="cifrota">230</p>
+  <p class="rango">El mayor fue de magnitud <strong>5.9</strong>. El mas profundo, a <strong>144 km</strong>.</p>
+</section>
+
+<h2>Cuando ocurrieron</h2>
+<p class="apunte">Cada barra es una hora. Arrastra para ver cuantos hubo en cada una.</p>
+<div id="gr-horas"></div>
+
+<h2>Reparto por magnitud</h2>
+<p class="apunte">La forma de esta grafica es siempre la misma en todo el planeta: muchos pequenos, poquisimos grandes.</p>
+<div id="gr-magnitudes"></div>
+
+<h2>La lista</h2>
+<ol class="lista">
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">southern East Pacific Rise</span>
+    <span class="valor">5.9</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">71 km WSW of Puerto Madero, Mexico</span>
+    <span class="valor">5.6</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">159 km WSW of Abepura, Indonesia</span>
+    <span class="valor">5.6</span>
+    <span class="sub">69.1 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">83 km S of Isangel, Vanuatu</span>
+    <span class="valor">5.4</span>
+    <span class="sub">98.1 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">53 km W of Bulolo, Papua New Guinea</span>
+    <span class="valor">5.4</span>
+    <span class="sub">65.2 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">66 km NNW of Arthurs Point, New Zealand</span>
+    <span class="valor">5.3</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">78 km SSW of Nikolski, Alaska</span>
+    <span class="valor">5.2</span>
+    <span class="sub">35 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">South Sandwich Islands region</span>
+    <span class="valor">5.2</span>
+    <span class="sub">84.1 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">70 km NNW of Arthurs Point, New Zealand</span>
+    <span class="valor">5.2</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">95 km SSW of Nikolski, Alaska</span>
+    <span class="valor">5.2</span>
+    <span class="sub">35 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">Volcano Islands, Japan region</span>
+    <span class="valor">4.9</span>
+    <span class="sub">38.4 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">85 km SSW of Nikolski, Alaska</span>
+    <span class="valor">4.9</span>
+    <span class="sub">18.8 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">98 km SSW of Nikolski, Alaska</span>
+    <span class="valor">4.9</span>
+    <span class="sub">38.5 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">43 km NE of Ruteng, Indonesia</span>
+    <span class="valor">4.7</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">Mid-Indian Ridge</span>
+    <span class="valor">4.7</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">101 km SSW of Nikolski, Alaska</span>
+    <span class="valor">4.6</span>
+    <span class="sub">16.7 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">Mid-Indian Ridge</span>
+    <span class="valor">4.6</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">Mid-Indian Ridge</span>
+    <span class="valor">4.6</span>
+    <span class="sub">10 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">Kuril Islands</span>
+    <span class="valor">4.5</span>
+    <span class="sub">144.1 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">103 km WSW of Puerto Madero, Mexico</span>
+    <span class="valor">4.3</span>
+    <span class="sub">32.2 km de profundidad</span>
+  </li>
+</ol>
+
+<h2>Un par de cosas que confunden</h2>
+<p>Los nombres de los sitios llegan en ingles porque es como los publica el organismo. Traducirlos automaticamente daria resultados peores que dejarlos.</p>
+<p>Vas a ver muchisimos sismos en California, Alaska y Hawai. No es que tiemble mas alli: es que hay muchos mas sensores. El catalogo mide instrumentacion tanto como geologia.</p>
+<p>La escala de magnitud es logaritmica. Un 6 no es el doble que un 3, es unas mil veces mas energia.</p>
+
+
+<footer class="pie">
+
+<p>Fuente: United States Geological Survey. Dominio publico. Los datos se refrescan cada vez que corre la construccion, no en tiempo real.</p>
+
+<p>Generado el 2026-09-02. Los datos se actualizan solos con una GitHub Action. Parte de <a href="https://adrianezd.github.io/proyecciones/">Proyecciones</a>.</p>
+</footer>
+</main>
+
+<script src="./estatico/grafica.js"></script>
+
+<script id="datos" type="application/json">{"horas": [{"etiqueta": "-23h", "cuantos": 13}, {"etiqueta": "-22h", "cuantos": 20}, {"etiqueta": "-21h", "cuantos": 12}, {"etiqueta": "-20h", "cuantos": 7}, {"etiqueta": "-19h", "cuantos": 8}, {"etiqueta": "-18h", "cuantos": 5}, {"etiqueta": "-17h", "cuantos": 13}, {"etiqueta": "-16h", "cuantos": 16}, {"etiqueta": "-15h", "cuantos": 9}, {"etiqueta": "-14h", "cuantos": 13}, {"etiqueta": "-13h", "cuantos": 11}, {"etiqueta": "-12h", "cuantos": 13}, {"etiqueta": "-11h", "cuantos": 10}, {"etiqueta": "-10h", "cuantos": 8}, {"etiqueta": "-9h", "cuantos": 9}, {"etiqueta": "-8h", "cuantos": 8}, {"etiqueta": "-7h", "cuantos": 8}, {"etiqueta": "-6h", "cuantos": 5}, {"etiqueta": "-5h", "cuantos": 6}, {"etiqueta": "-4h", "cuantos": 4}, {"etiqueta": "-3h", "cuantos": 6}, {"etiqueta": "-2h", "cuantos": 13}, {"etiqueta": "-1h", "cuantos": 6}, {"etiqueta": "-0h", "cuantos": 7}], "magnitudes": [{"tramo": "menos de 2", "cuantos": 147}, {"tramo": "2 a 3", "cuantos": 37}, {"tramo": "3 a 4", "cuantos": 14}, {"tramo": "4 a 5", "cuantos": 16}, {"tramo": "5 a 6", "cuantos": 10}, {"tramo": "6 o mas", "cuantos": 0}]}</script>
+<script>
+(function(){
+  const D = JSON.parse(document.getElementById("datos").textContent);
+  Grafica.barras("#gr-horas", {
+    datos: D.horas.map(h => ({x: h.etiqueta, y: h.cuantos})),
+    formato: v => Grafica.numero(v) + (v === 1 ? " sismo" : " sismos"),
+    titulo: "Sismos por hora"
+  });
+  Grafica.barras("#gr-magnitudes", {
+    datos: D.magnitudes.map(m => ({x: m.tramo, y: m.cuantos})),
+    formato: v => Grafica.numero(v) + (v === 1 ? " sismo" : " sismos"),
+    titulo: "Sismos por magnitud"
+  });
+})();
+</script>
+
+</body>
+</html>
