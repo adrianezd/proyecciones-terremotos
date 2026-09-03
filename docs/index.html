@@ -33,7 +33,7 @@
 
 <section class="resultado">
   <p class="resultado-intro">Sismos registrados</p>
-  <p class="cifrota">205</p>
+  <p class="cifrota">191</p>
   <p class="rango">El mayor fue de magnitud <strong>6.2</strong>. El mas profundo, a <strong>581 km</strong>.</p>
 </section>
 
@@ -98,6 +98,11 @@
     <span class="sub">581.4 km de profundidad</span>
   </li>
   <li class="item"><span class="pos"></span>
+    <span class="nombre">122 km WNW of Houma, Tonga</span>
+    <span class="valor">4.5</span>
+    <span class="sub">218.0 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
     <span class="nombre">30 km S of Sipí, Colombia</span>
     <span class="valor">4.5</span>
     <span class="sub">81.4 km de profundidad</span>
@@ -118,11 +123,6 @@
     <span class="sub">9.1 km de profundidad</span>
   </li>
   <li class="item"><span class="pos"></span>
-    <span class="nombre">94 km SSW of Nikolski, Alaska</span>
-    <span class="valor">4.0</span>
-    <span class="sub">35 km de profundidad</span>
-  </li>
-  <li class="item"><span class="pos"></span>
     <span class="nombre">90 km SSW of Nikolski, Alaska</span>
     <span class="valor">3.8</span>
     <span class="sub">17.2 km de profundidad</span>
@@ -133,11 +133,6 @@
     <span class="sub">135 km de profundidad</span>
   </li>
   <li class="item"><span class="pos"></span>
-    <span class="nombre">100 km SSW of Nikolski, Alaska</span>
-    <span class="valor">3.8</span>
-    <span class="sub">13.5 km de profundidad</span>
-  </li>
-  <li class="item"><span class="pos"></span>
     <span class="nombre">100 km S of Nikolski, Alaska</span>
     <span class="valor">3.7</span>
     <span class="sub">5.1 km de profundidad</span>
@@ -146,6 +141,11 @@
     <span class="nombre">94 km SSW of Nikolski, Alaska</span>
     <span class="valor">3.4</span>
     <span class="sub">10.5 km de profundidad</span>
+  </li>
+  <li class="item"><span class="pos"></span>
+    <span class="nombre">86 km S of Nikolski, Alaska</span>
+    <span class="valor">3.4</span>
+    <span class="sub">4 km de profundidad</span>
   </li>
 </ol>
 
@@ -165,7 +165,7 @@
 
 <script src="./estatico/grafica.js"></script>
 
-<script id="datos" type="application/json">{"horas": [{"etiqueta": "-23h", "cuantos": 15}, {"etiqueta": "-22h", "cuantos": 14}, {"etiqueta": "-21h", "cuantos": 14}, {"etiqueta": "-20h", "cuantos": 11}, {"etiqueta": "-19h", "cuantos": 3}, {"etiqueta": "-18h", "cuantos": 12}, {"etiqueta": "-17h", "cuantos": 10}, {"etiqueta": "-16h", "cuantos": 7}, {"etiqueta": "-15h", "cuantos": 5}, {"etiqueta": "-14h", "cuantos": 7}, {"etiqueta": "-13h", "cuantos": 3}, {"etiqueta": "-12h", "cuantos": 12}, {"etiqueta": "-11h", "cuantos": 11}, {"etiqueta": "-10h", "cuantos": 4}, {"etiqueta": "-9h", "cuantos": 13}, {"etiqueta": "-8h", "cuantos": 9}, {"etiqueta": "-7h", "cuantos": 6}, {"etiqueta": "-6h", "cuantos": 2}, {"etiqueta": "-5h", "cuantos": 5}, {"etiqueta": "-4h", "cuantos": 6}, {"etiqueta": "-3h", "cuantos": 9}, {"etiqueta": "-2h", "cuantos": 8}, {"etiqueta": "-1h", "cuantos": 11}, {"etiqueta": "-0h", "cuantos": 7}], "magnitudes": [{"tramo": "menos de 2", "cuantos": 141}, {"tramo": "2 a 3", "cuantos": 36}, {"tramo": "3 a 4", "cuantos": 12}, {"tramo": "4 a 5", "cuantos": 7}, {"tramo": "5 a 6", "cuantos": 7}, {"tramo": "6 o mas", "cuantos": 1}]}</script>
+<script id="datos" type="application/json">{"horas": [{"etiqueta": "-23h", "cuantos": 11}, {"etiqueta": "-22h", "cuantos": 14}, {"etiqueta": "-21h", "cuantos": 10}, {"etiqueta": "-20h", "cuantos": 3}, {"etiqueta": "-19h", "cuantos": 12}, {"etiqueta": "-18h", "cuantos": 14}, {"etiqueta": "-17h", "cuantos": 4}, {"etiqueta": "-16h", "cuantos": 5}, {"etiqueta": "-15h", "cuantos": 5}, {"etiqueta": "-14h", "cuantos": 3}, {"etiqueta": "-13h", "cuantos": 15}, {"etiqueta": "-12h", "cuantos": 9}, {"etiqueta": "-11h", "cuantos": 8}, {"etiqueta": "-10h", "cuantos": 9}, {"etiqueta": "-9h", "cuantos": 9}, {"etiqueta": "-8h", "cuantos": 7}, {"etiqueta": "-7h", "cuantos": 2}, {"etiqueta": "-6h", "cuantos": 2}, {"etiqueta": "-5h", "cuantos": 7}, {"etiqueta": "-4h", "cuantos": 9}, {"etiqueta": "-3h", "cuantos": 9}, {"etiqueta": "-2h", "cuantos": 12}, {"etiqueta": "-1h", "cuantos": 8}, {"etiqueta": "-0h", "cuantos": 4}], "magnitudes": [{"tramo": "menos de 2", "cuantos": 132}, {"tramo": "2 a 3", "cuantos": 33}, {"tramo": "3 a 4", "cuantos": 10}, {"tramo": "4 a 5", "cuantos": 7}, {"tramo": "5 a 6", "cuantos": 7}, {"tramo": "6 o mas", "cuantos": 1}]}</script>
 <script>
 (function(){
   const D = JSON.parse(document.getElementById("datos").textContent);
